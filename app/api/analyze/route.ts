@@ -27,8 +27,8 @@ export async function POST(request: NextRequest) {
     console.log("AI raw output:", text)
 
     return NextResponse.json(analysis)
-  } catch (error) {
-    console.error("Resume analysis error:", error)
+  } catch (_error) {
+    console.error("Resume analysis error:", _error)
     return NextResponse.json({ error: "Analysis failed" }, { status: 500 })
   }
 }
