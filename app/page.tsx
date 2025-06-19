@@ -32,7 +32,7 @@ export default function SimpleResumeOptimizer() {
 
       const result = await response.json()
       setAnalysis(result)
-    } catch (error) {
+    } catch (_error) {
       alert("Analysis failed. Please try again.")
     } finally {
       setIsAnalyzing(false)
